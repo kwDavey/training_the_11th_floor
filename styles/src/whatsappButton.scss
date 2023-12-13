@@ -1,0 +1,28 @@
+.float {
+    position: fixed;
+    width: 200px;
+    height: 180px;
+    bottom: 0px;
+    left: 0%;
+    z-index: 1000;
+    background-repeat: no-repeat;
+
+
+
+    background: URL('/voting-icon/desktop.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+
+
+    @media screen and (min-width: 768px) {
+        //Desktop
+        width: 100px;
+        height: 250px;
+        bottom: 40%;
+    }
+}
+
+.my-float {
+    margin-top: 16px;
+}

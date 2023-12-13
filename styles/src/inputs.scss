@@ -1,0 +1,37 @@
+.TextInput {
+    width: 100%;
+    min-width: 200px;
+
+  
+
+
+    display: block !important;
+    min-height: 39px;
+
+    border: 1px solid #c0c0c0;
+    caret-color: #161616;
+    color: #161616 !important;
+    outline: none;
+    padding: 0.75rem;
+    margin: auto;
+
+    appearance: none;
+}
+
+
+
+.lblInput {
+    color: #161616;
+    display: block;
+    padding-bottom: 0.25rem;
+    padding-left: 0.5rem;
+    min-width: 150px;
+
+    text-align: left;
+    margin-left: auto;
+    sup {
+        color: #ef0000;
+        padding-left: 0.25rem;
+        top: -0.25rem;
+    }
+}

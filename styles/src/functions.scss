@@ -1,0 +1,47 @@
+@function get-color($key) {
+    @if map-has-key($colors, $key) {
+        @return map-get($colors, $key);
+    }
+
+    @warn "Unknown `#{$key}` in $colors.";
+    @return null;
+}
+@function get-spacing($key) {
+    @if map-has-key($spacings, $key) {
+        @return map-get($spacings, $key);
+    }
+
+    @warn "Unknown `#{$key}` in $spacings.";
+    @return null;
+}
+@function get-font-size($key) {
+    @if map-has-key($font-sizes, $key) {
+        @return map-get($font-sizes, $key);
+    }
+    @warn "Unknown `#{$key}` in $font-sizes.";
+    @return null;
+}
+@function get-heading-size($key) {
+    @if map-has-key($heading-sizes, $key) {
+        @return map-get($heading-sizes, $key);
+    }
+    @warn "Unknown `#{$key}` in $font-sizes.";
+    @return null;
+}
+@function get-font-weight($key) {
+    @if map-has-key($font-weights, $key) {
+        @return map-get($font-weights, $key);
+    }
+    @warn "Unknown `#{$key}` in $font-weight.";
+    @return null;
+}
+@function get-breakpoint($key) {
+    @if map-has-key($breakpoints, $key) {
+        @return map-get($breakpoints, $key);
+    }
+    @warn "Unknown `#{$key}` in $breakpoints.";
+    @return null;
+}
+@function pem($pixels) {
+    @return (math.div($pixels, 16px) * 1em);
+}

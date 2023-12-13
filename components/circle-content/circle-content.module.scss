@@ -1,0 +1,27 @@
+.circleLeft {
+    width: 30rem;
+    height: 30rem;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 2;
+    object-fit: cover;
+
+    &-small {
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+        // position: absolute;
+        // z-index: 2;
+        object-fit: cover;
+    }
+}
+
+.circleRight {
+    width: 30rem;
+    height: 30rem;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 2;
+    object-fit: cover;
+    left: 60%;
+}

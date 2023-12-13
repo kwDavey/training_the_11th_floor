@@ -1,0 +1,314 @@
+@import './fonts.scss';
+
+html,
+body {
+    font-size: 16px !important;
+    --color-text-default: #FFFFFF;
+}
+
+* {
+    color: var(--color-text-default);
+    font-family: 'Lato';
+    font-size: var(--font-size-medium);
+    letter-spacing: 4px;
+    overflow-wrap: anywhere;
+}
+
+$heading-sizes: (
+    'h1': 1.6rem,
+    'h2': 1.6rem,
+    'h3': 1.5rem,
+    'h4': 1.25rem,
+    'h5': 1.25rem,
+    'h6': 1rem
+);
+
+@each $key,
+$val in $heading-sizes {
+
+    #{$key},
+    .#{$key} {
+        font-size: $val;
+        font-weight: bold;
+        margin: 0;
+    }
+}
+
+p {
+    line-height: 1.6;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    font-size: 1.3rem;
+
+    &+& {
+        padding-top: var(--spacing-medium);
+    }
+}
+
+li {
+    line-height: 1.6;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+
+    &+& {
+        padding-top: var(--spacing-medium);
+    }
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 1.5em;
+}
+
+ul li:before {
+    content: "–";
+    position: absolute;
+    margin-left: -1em;
+}
+
+.truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@mixin text-align {
+    &-align {
+        &_center {
+            text-align: center;
+        }
+
+        &_left {
+            text-align: left;
+        }
+
+        &_right {
+            text-align: right;
+        }
+
+        &_justify {
+            text-align: justify;
+        }
+    }
+}
+
+@mixin text-case {
+    &-case {
+        &_lower {
+            text-transform: lowercase;
+        }
+
+        &_title {
+            text-transform: capitalize;
+        }
+
+        &_upper {
+            text-transform: uppercase;
+        }
+    }
+}
+
+@mixin text-size() {
+    &-size {
+
+        @each $key,
+        $val in $font-sizes {
+            &_#{$key} {
+                font-size: var(--font-size-#{$key});
+            }
+        }
+    }
+}
+
+.text {
+    @include text-align();
+    @include text-case();
+    @include text-size();
+
+    &-style {
+        &_italic {
+            font-style: italic;
+        }
+    }
+
+    &-color {
+
+        @each $key,
+        $val in $colors {
+            &_#{$key} {
+                color: var(--color-#{$key}) !important;
+
+                * {
+                    color: var(--color-#{$key});
+                }
+            }
+        }
+
+        &_darkGreen {
+            color: #022720;
+        }
+    }
+
+    &-weight {
+
+        @each $key,
+        $val in $font-weights {
+            &_#{$key} {
+                font-weight: var(--font-weight-#{$key});
+            }
+        }
+    }
+
+    &-line-height {
+        &_small {
+            line-height: 2rem;
+        }
+    }
+}
+
+@each $size,
+$width in $breakpoints {
+    @media all and (min-width: $width) {
+        .#{$size}-text {
+            @include text-align();
+            @include text-case();
+            @include text-size();
+        }
+    }
+}
+
+$displayHeadings: (
+    1: 6rem,
+    2: 5.5rem,
+    3: 4.5rem,
+    4: 3.5rem,
+    5: 2rem,
+    6: 1.5rem
+);
+
+@each $key,
+$val in $displayHeadings {
+    .display-heading {
+        &-#{$key} {
+            font-size: $val;
+        }
+    }
+}
+
+@each $size,
+$width in $breakpoints {
+    @media all and (min-width: $width) {
+
+        @each $key,
+        $val in $displayHeadings {
+            .#{$size}-display-heading {
+                &-#{$key} {
+                    font-size: $val;
+                }
+            }
+        }
+    }
+}
+
+.left-title {
+    font-size: 15px;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #636363;
+}
+
+.section-title {
+    &_large {
+        font-size: 50px;
+
+        @media all and (min-width: 1024px) {
+            font-size: 80px;
+        }
+
+        font-weight: 300;
+        line-height: 1.16;
+        display: block;
+    }
+
+    &_medium {
+        font-size: 50px;
+
+        @media all and (min-width: 1024px) {
+            font-size: 60px;
+        }
+
+        font-weight: 300;
+        line-height: 1.16;
+        display: block;
+    }
+
+    &_small {
+        font-size: 15px;
+        font-weight: normal;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: #636363;
+    }
+}
+
+.content-teaser {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.6;
+
+    &_title {
+        font-size: 30px;
+        font-weight: 300;
+        line-height: 1.26667;
+        display: block;
+    }
+}
+
+@import url('https://p.typekit.net/p.css?s=1&k=lan8btx&ht=tk&f=6801.6805.6806.9945.6808.6809.8415.8416.6846.6847.6848.6851.27069.27070.27073.27074&a=13233898&app=typekit&e=css');
+
+@font-face {
+    font-family: 'myriad-pro';
+    src: url('https://use.typekit.net/af/1b1b1e/00000000000000000001709e/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3') format('woff2'), url('https://use.typekit.net/af/1b1b1e/00000000000000000001709e/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3') format('woff'),
+        url('https://use.typekit.net/af/1b1b1e/00000000000000000001709e/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3') format('opentype');
+    font-display: auto;
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'myriad-pro';
+    src: url('https://use.typekit.net/af/2e2357/00000000000000000001709f/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3') format('woff2'), url('https://use.typekit.net/af/2e2357/00000000000000000001709f/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3') format('woff'),
+        url('https://use.typekit.net/af/2e2357/00000000000000000001709f/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3') format('opentype');
+    font-display: auto;
+    font-style: italic;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'myriad-pro';
+    src: url('https://use.typekit.net/af/d32e26/00000000000000000001709b/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3') format('woff2'), url('https://use.typekit.net/af/d32e26/00000000000000000001709b/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3') format('woff'),
+        url('https://use.typekit.net/af/d32e26/00000000000000000001709b/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3') format('opentype');
+    font-display: auto;
+    font-style: italic;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'myriad-pro';
+    src: url('https://use.typekit.net/af/cafa63/00000000000000000001709a/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3') format('woff2'), url('https://use.typekit.net/af/cafa63/00000000000000000001709a/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3') format('woff'),
+        url('https://use.typekit.net/af/cafa63/00000000000000000001709a/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3') format('opentype');
+    font-display: auto;
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Digital Clock';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/digital-7.regular.ttf');
+}

@@ -1,0 +1,51 @@
+li {
+    padding: 0.25rem 0;
+}
+.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    > li {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    li {
+        &::before {
+            color: #000000;
+            content: '\2022';
+            display: inline-block;
+            font-weight: bold;
+            padding-right: 0.4rem;
+            width: 1rem;
+        }
+    }
+}
+.list-style_brand {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    > li {
+        width: 100%;
+    }
+    li {
+        &::before {
+            color: #00b262;
+        }
+    }
+}
+.list_inverse {
+    > li {
+        color: #1a1a1a;
+    }
+}
+@media screen and (min-width: 46.875em) {
+    .list-style_brand {
+        > li {
+            width: 50%;
+        }
+    }
+}

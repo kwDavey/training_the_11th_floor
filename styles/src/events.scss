@@ -1,0 +1,253 @@
+.bg {
+    background-color: #000000;
+}
+
+.text-white{
+    color: rgba(255, 255, 255, 1);
+}
+
+.white-text {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.whiteish-text {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.max-height {
+    height: 100%;
+}
+
+.link-style {
+    &:hover {
+        color: white;
+    }
+}
+
+input::placeholder, textarea::placeholder{
+    color:#CD612E;
+}
+
+.events-image {
+    height: 300px;
+
+    @media screen and (min-width: 768px) {
+        height: 400px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        height: 700px;
+    }
+
+    img {
+        object-fit: scale-down;
+    }
+}
+
+.contact-background {
+    z-index: 2;
+
+    object-fit: cover;
+    background-repeat: no-repeat;
+
+    @media screen and (min-width: 375px) {
+        height: 500px;
+    }
+
+    @media screen and (min-width: 768px) {
+        height: 600px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        height: 789px;
+    }
+
+    img {
+        object-fit: cover;
+    }
+}
+
+.z-section {
+    z-index: 5;
+}
+
+.texture-bg {
+    z-index: 99;
+    height: 40%;
+    top: 200px;
+    position: absolute;
+
+    @media screen and (min-width: 768px) {
+        height: 600px;
+        top: 400px;
+    }
+}
+
+.texture-img{
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: visible;
+}
+
+.spacer {
+    height: 320px;
+
+    @media screen and (min-width: 768px) {
+        height: 450px;
+    }
+}
+
+.iframe-container {
+    height: 600px;
+}
+
+.responsive-iframe {
+    border: none;
+}
+
+.styled-input {
+    height: 35px;
+    border: none;
+    border-bottom: 1px solid #CD612E;
+    background-color: transparent;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.form-button {
+    height: 50px;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    background-color: transparent;
+
+    &:hover {
+        cursor: pointer;
+        color: rgba(255, 255, 255, 0.8);
+    }
+}
+
+.download-button {
+    height: 50px;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    background-color: transparent;
+
+    &:hover {
+        cursor: pointer;
+        color: rgba(255, 255, 255, 0.8);
+    }
+}
+
+.styled-area {
+    height: 35px;
+}
+.nowrap {
+    white-space: nowrap;
+}
+
+.text-gray{
+    color: #999999;
+}
+
+.contact-banner{
+
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media screen and (min-width: 375px) {
+        height: 500px;
+    }
+
+    @media screen and (min-width: 768px) {
+        height: 600px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        height: 500px;
+    }
+
+}
+
+.contact-overlay{
+
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 250px;
+
+
+}
+
+.event-banner{
+
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media screen and (min-width: 375px) {
+        height: 1500px;
+    }
+
+    @media screen and (min-width: 768px) {
+        height: 1500px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        height: 1050px;
+    }
+
+}
+
+.event-overlay{
+
+    background-color: rgba(0, 0, 0, 0.5);
+    
+    @media screen and (min-width: 375px) {
+        height: 1400px;
+    }
+
+    @media screen and (min-width: 768px) {
+        height: 1400px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        height: 975px;
+    }
+
+}
+
+.event-overlay-backing{
+
+    background-color: rgba(0, 0, 0, 0.5);
+    
+    @media screen and (min-width: 375px) {
+        height: 1050px;
+    }
+
+    @media screen and (min-width: 768px) {
+        height: 1050px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        height: 675px;
+    }
+
+
+}
+
+.contact-button{
+    background-color: rgba(0, 0, 0, 0.5);
+    
+
+    @media screen and (min-width: 375px) {
+        height: 100px;
+    }
+
+    @media screen and (min-width: 768px) {
+        
+        height: 80px;
+    }
+}

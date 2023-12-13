@@ -1,0 +1,128 @@
+.section {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    @media screen and (min-width: 350px) {
+        height: 10rem;
+    }
+    @media screen and (min-width: 750px) {
+        height: 10rem;
+    }
+    @media screen and (min-width: 1020px) {
+        height: 20rem;
+    }
+}
+
+.title {
+    color: white;
+    font-size: 3rem;
+    font-weight: 200;
+}
+
+.container {
+    height: 900px;
+    object-fit: cover;
+    background-repeat: no-repeat;
+
+    @media screen and (min-width: 375px) {
+        height: 400px;
+    }
+
+    @media screen and (min-width: 768px) {
+        height: 600px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        height: 900px;
+    }
+}
+
+.largeContainer{
+    object-fit: cover;
+    background-repeat: no-repeat;
+
+    @media screen and (min-width: 375px) {
+        height: 400px;
+    }
+
+    @media screen and (min-width: 768px) {
+        height: 600px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        height: 700px;
+    }
+}
+
+.largeSection {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    @media screen and (min-width: 350px) {
+        height: 16rem;
+    }
+    @media screen and (min-width: 750px) {
+        height: 16rem;
+    }
+    @media screen and (min-width: 1020px) {
+        height: 26rem;
+    }
+}
+
+.smallSection {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    @media screen and (min-width: 350px) {
+        height: 10rem;
+    }
+    @media screen and (min-width: 750px) {
+        height: 10rem;
+    }
+    @media screen and (min-width: 1020px) {
+        height: 20rem;
+    }
+}
+
+.smallContainer{
+    object-fit: cover;
+    background-repeat: no-repeat;
+
+    @media screen and (min-width: 375px) {
+        height: 300px;
+    }
+
+    @media screen and (min-width: 768px) {
+        height: 500px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        height: 600px;
+    }
+}
+
+.hover {
+    color: rgba(255, 255, 255, 0.9);
+
+    &:hover{
+        cursor: pointer;
+    }
+        
+
+    &:after {
+        display: block;
+        content: '';
+        border-bottom: solid 2px white;
+        transform: scaleX(0);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    &:hover:after {
+        transform: scaleX(1);
+        color: rgba(255, 255, 255, 1);
+    }
+}
+
+.largeTitle {
+
+    color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(0, 0, 0, 0.5);
+
+}

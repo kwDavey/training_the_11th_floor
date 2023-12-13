@@ -1,0 +1,66 @@
+.mobileMealDetails{
+    color: black;
+    font-Weight: normal;
+    font-Family:"Lato";
+    font-size: medium;
+}
+
+
+.mobileMealName{
+    color: black;
+    font-Weight: normal;
+    text-Transform:uppercase;
+    font-Family:"Lato";
+    font-size: large;
+}
+
+
+.mobileTypeTitle{
+    color:Black;
+    text-Transform: uppercase;
+    font-Family:"Playfair Display";
+    font-weight: normal;
+    font-size: x-large;
+    letter-spacing: 4px;
+}
+
+
+.mobileTypeTitleIpad{
+    color:Black;
+    text-Transform: uppercase;
+    font-Family:"Playfair Display";
+    font-weight: normal;
+    font-size: 4rem;
+    letter-spacing: 8px;
+}
+
+
+
+.mobileMealNameIpad{
+    color: black;
+    font-Weight: normal;
+    text-Transform:uppercase;
+    font-Family:"Lato";
+    font-size:2.5rem;
+}
+
+.mobileMealDetailsIpad{
+    color: black;
+    font-Weight: normal;
+    font-Family:"Lato";
+    font-size: 1.5rem;
+}
+
+
+.drinksDetails{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+.QRMenuPaddingRight{
+    @media screen and (min-width: 766px) {
+        padding-right: 25px;
+    }
+
+}

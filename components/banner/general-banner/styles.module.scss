@@ -1,0 +1,64 @@
+.overlayCon {
+    // position: relative;
+    // top: 200px;
+    // height: 789px;
+    // background-color: transparent;
+    object-fit: cover;
+    background-repeat: no-repeat;
+
+    @media screen and (min-width: 375px) {
+        height: 500px;
+    }
+
+    @media screen and (min-width: 768px) {
+        height: 600px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        height: 789px;
+    }
+}
+
+// height: 900px;
+//     object-fit: cover;
+//     background-repeat: no-repeat;
+
+//     @media screen and (min-width: 375px) {
+//         height: 400px;
+//     }
+
+//     @media screen and (min-width: 768px) {
+//         height: 600px;
+//     }
+
+//     @media screen and (min-width: 1024px) {
+//         height: 900px;
+//     }
+
+.overlay {
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+}
+
+// .hover {
+//     color: rgba(255, 255, 255, 0.9);
+
+//     &:hover{
+//         cursor: pointer;
+//     }
+        
+
+//     &:after {
+//         display: block;
+//         content: '';
+//         border-bottom: solid 2px white;
+//         transform: scaleX(0);
+//         transition: transform 0.3s ease-in-out;
+//     }
+
+//     &:hover:after {
+//         transform: scaleX(1);
+//         color: rgba(255, 255, 255, 1);
+//     }
+// }

@@ -1,0 +1,274 @@
+.button {
+    transition: 0.3s;
+
+    border: none;
+    color: white;
+    cursor: pointer;
+
+
+    font-size: var(--font-size-medium);
+    font-weight: normal !important;
+
+    line-height: 1.15rem;
+    width: 100%;
+    height: 100%;
+
+
+
+
+    text-transform: uppercase;
+    outline: none;
+
+    position: absolute;
+    z-index: 10;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    white-space: nowrap;
+
+
+
+}
+
+
+
+.primary {
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 2px solid white;
+
+    &:hover {
+        color: #022720;
+    }
+}
+
+.secondary {
+    background-color: transparent;
+    color: #022720;
+    border: 2px solid #022720;
+
+    &:hover {
+        color: white;
+    }
+}
+
+
+.DarkBackground {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+
+    &:hover {
+        color: #022720;
+    }
+
+}
+
+.CopperBackgroundLight {
+    background-color: transparent;
+    color: #DE7E49;
+    border: 2px solid #DE7E49;
+
+    &:hover {
+        color: #DE7E49;
+        border: 2px solid white;
+    }
+
+}
+
+.CopperBackgroundLightActive {
+    background-color: white;
+    color: #DE7E49;
+    border: 2px solid white;
+
+}
+
+.CopperBackgroundDark {
+    background-color: transparent;
+    color: #CD612E;
+    border: 2px solid #CD612E;
+
+    &:hover {
+        color: white;
+    }
+
+}
+.CopperBackgroundDarkActive {
+    background-color: #CD612E;
+    color: white;
+    border: 2px solid #CD612E;
+
+}
+
+.white {
+    background-color: white;
+    color: #022720;
+    border: 2px solid white;
+
+    &:hover {
+        color: #022720;
+    }
+}
+
+
+.slide {
+    &_primary {
+        background: white;
+
+
+        left: 100%;
+        width: 0%;
+        height: 100%;
+
+        transition: 1s;
+        height: 100%;
+
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    &_secondary {
+        background: #022720;
+
+
+        left: 100%;
+        width: 0%;
+        height: 100%;
+
+        transition: 1s;
+        height: 100%;
+
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    &_dark {
+        background: white;
+
+        left: 100%;
+        width: 0%;
+        height: 100%;
+
+        transition: 1s;
+        height: 100%;
+
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    &_white {
+        background: #022720;
+
+        left: 100%;
+        width: 0%;
+        height: 100%;
+
+        transition: 1s;
+        height: 100%;
+
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    &_CopperLight {
+        background: white;
+
+        left: 100%;
+        width: 0%;
+        height: 100%;
+
+        transition: 1s;
+        height: 100%;
+
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    &_CopperDark {
+        background: #CD612E;
+
+        left: 100%;
+        width: 0%;
+        height: 100%;
+
+        transition: 1s;
+        height: 100%;
+
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+}
+
+.size {
+    &_medium {
+        padding: var(--spacing-medium) var(--spacing-x-large);
+    }
+
+    &_large {
+        padding: var(--spacing-large) var(--spacing-xx-large);
+    }
+
+    &_small {
+        padding: var(--spacing-small) var(--spacing-small);
+
+    }
+    &_fill{
+        width:100%;
+        height: 100%;
+        min-width: 100%;
+        min-height: 100%;
+    }
+    &_xsmall {
+        padding: 0px;
+        max-width: 400px !important;
+        height: 30px !important;
+
+        button {
+            font-size: 0.8rem;
+        }
+
+    }
+}
+
+
+.wrapper {
+    position: relative;
+    overflow: hidden;
+
+    width: 100%;
+    height: 50px;
+
+    max-width: 280px;
+    margin: auto;
+
+    &_xsmall {
+        height: 30px !important;
+        max-width: 400px !important;
+    }
+
+
+
+    &_align-right {
+        margin-left: auto;
+        margin-right: 0px;
+    }
+
+    &_align-left {
+        margin-left: 0px;
+        margin-right: auto;
+    }
+
+    @media screen and (max-width: 750px) {
+        margin: auto !important;
+    }
+
+}
+
+
+.wrapper:hover .slide {
+    transition: 1s;
+    width: 100%;
+}

@@ -1,0 +1,12 @@
+export { default as Banner } from './banner';
+export { default as GeneralBanner } from './banner/general-banner';
+export { default as Button } from './button';
+export { default as Circlecontent } from './circle-content/circle-content';
+export { default as Buttonsection } from './button-sections/button-sections';
+export { default as Header } from './header';
+export { default as Footer } from './footer';
+export { default as Slider } from './slider';
+export { default as ViewPerUser } from './viewPerUser/viewPerUser.component';
+export { Slide as Slide } from './slider';
+export { default as Modal } from './modal';
+export { default as FormElement } from './form/form-element';

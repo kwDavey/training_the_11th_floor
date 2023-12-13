@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@GA": ["modules/gtag"],
+            "@Modules": ["modules"],
+            "@Modules/*": ["modules/*"],
+            "@Components": ["components/components"],
+            "@Styles/*": ["styles/*"]
+        }
+    }
+}

@@ -1,0 +1,206 @@
+@mixin width($columns: $grid-columns, $breakpoint: null) {
+    $breakpoint-string: null;
+
+    @each $denominator in $columns {
+        @if ($breakpoint !=null) {
+            $breakpoint-string: $breakpoint + '-';
+        }
+
+        @for $i from 1 through $denominator {
+            .#{$breakpoint-string}size_#{$i}-of-#{$denominator} {
+                width: math.div($i, $denominator) * 100%;
+            }
+        }
+    }
+
+    .#{$breakpoint}-size_none {
+        width: initial;
+    }
+}
+@mixin vertical-align {
+    &_vertical {
+        flex-direction: column;
+
+        &-align {
+            &-center {
+                align-items: center;
+            }
+
+            &-start {
+                align-items: flex-start;
+            }
+
+            &-end {
+                align-items: flex-end;
+            }
+        }
+    }
+}
+@mixin horizontal-align {
+    &_align {
+        &-center {
+            justify-content: center;
+        }
+
+        &-spread {
+            justify-content: space-between;
+        }
+
+        &-space {
+            justify-content: space-around;
+        }
+
+        &-even {
+            justify-content: space-evenly;
+        }
+
+        &-start {
+            justify-content: flex-start;
+        }
+
+        &-end {
+            justify-content: flex-end;
+        }
+    }
+}
+
+.align{
+    &_center{
+        margin:auto;
+    }
+}
+
+.flex {
+    &_none {
+        flex: none;
+    }
+    &_grow {
+        flex-grow: 1;
+    }
+}
+
+.grid {
+    display: flex;
+    &-wrap {
+        flex-wrap: wrap;
+    }
+
+    &_pull-padded {
+        @each $key, $val in $spacings {
+            &-#{$key} {
+                margin-left: -$val;
+                margin-right: -$val;
+            }
+        }
+    }
+
+    @mixin horizontalGutters($size: small) {
+        > div {
+            &:not(:first-child):not(:last-child) {
+                padding: 0 var(--spacing-#{$size});
+            }
+
+            &:first-child {
+                padding-right: var(--spacing-#{$size});
+            }
+
+            &:last-child {
+                padding-left: var(--spacing-#{$size});
+            }
+        }
+    }
+
+    @mixin verticalGutters($size: small) {
+        > div {
+            &:not(:first-child):not(:last-child) {
+                padding: var(--spacing-#{$size}) 0;
+            }
+
+            &:first-child {
+                padding-bottom: var(--spacing-#{$size});
+            }
+
+            &:last-child {
+                padding-top: var(--spacing-#{$size});
+            }
+        }
+    }
+
+    &_horizontal-gutters {
+        @include horizontalGutters();
+
+        &_medium {
+            @include horizontalGutters(medium);
+        }
+
+        &_large {
+            @include horizontalGutters(large);
+        }
+    }
+
+    &_vertical-gutters {
+        @include verticalGutters();
+
+        &_medium {
+            @include verticalGutters(medium);
+        }
+
+        &_large {
+            @include verticalGutters(large);
+        }
+    }
+
+    @include vertical-align();
+    @include horizontal-align();
+
+    @media only screen and (max-width: pem(map-get($breakpoints, small))) {
+        &-small {
+            @include vertical-align();
+            @include horizontal-align();
+        }
+    }
+
+    @media only screen and (min-width: pem(map-get($breakpoints, medium))) {
+        &-medium {
+            @include vertical-align();
+            @include horizontal-align();
+        }
+    }
+
+    @media only screen and (min-width: pem(map-get($breakpoints, large))) {
+        &-large {
+            @include vertical-align();
+            @include horizontal-align();
+        }
+    }
+}
+
+.col-bump_left {
+    margin-left: auto;
+}
+
+@include width();
+
+@each $size in map-keys($breakpoints) {
+    $breakpoint: map-get($breakpoints, $size);
+
+    @media (min-width: #{pem($breakpoint)}) {
+        @include width($breakpoint: #{$size});
+        .#{$size}-grid-wrap {
+            flex-wrap: wrap;
+        }
+        .#{$size}-grid {
+            @include vertical-align();
+            @include horizontal-align();
+        }
+    }
+
+    .size_#{$size} {
+        width: #{pem($breakpoint)};
+    }
+
+    .max-size_#{$size} {
+        max-width: #{pem($breakpoint)};
+        width: 100%;
+    }
+}

@@ -1,0 +1,108 @@
+$colors: (
+    'primary': #ff6600,
+    'default': #777777,
+    'inverse': #434343,
+    'grey': #999999,
+    'black': #1a1a1a,
+    'white': #ffffff,
+    'text-default': #353535,
+
+    'copper-dark':#CD612E,
+    'copper-medium':#DE7E49,
+    'red':#ff0000,
+    'green':#008000
+);
+$breakpoints: (
+    x-small: 320px,
+    small: 480px,
+    medium: 768px,
+    large: 1024px,
+    x-large: 1280px
+);
+$grid-columns: (
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+);
+$font-sizes: (
+    'xx-small': 0.625rem,
+    'x-small': 0.75rem,
+    'small': 0.8125rem,
+    'medium': 1rem,
+    'large': 1.125rem,
+    'x-large': 1.25rem,
+    'xx-large': 1.5rem,
+    'xxx-large': 1.75rem,
+    'xxxx-large': 2rem,
+    'title-small': 3rem,
+    'title-medium': 4rem,
+    'title-large': 5rem
+);
+$heading-sizes: (
+    'h1': 4rem,
+    'h2': 3rem,
+    'h3': 2rem,
+    'h4': 1.75rem,
+    'h5': 1.5rem,
+    'h6': 1rem
+);
+$font-weights: (
+    'thin': 100,
+    'light': 300,
+    'regular': 400,
+    'medium': 500,
+    'bold': 700,
+    'black': 900
+);
+$spacings: (
+    'mega-1': 15rem,
+    'xxxx-large': 8.5rem,
+    'xxx-large': 4.5rem,
+    'xx-large': 3rem,
+    'x-large': 2rem,
+    'large': 1.5rem,
+    'medium': 1rem,
+    'small': 0.75rem,
+    'x-small': 0.5rem,
+    'xx-small': 0.25rem,
+    'xxx-small': 0.125rem,
+    'none': 0px,
+    'auto': auto
+);
+
+:root {
+    --content-boundary: 1400px;
+
+    //colors
+    @each $key,
+    $val in $colors {
+        --color-#{$key}: #{$val};
+    }
+
+    //spacings
+    @each $key,
+    $val in $spacings {
+        --spacing-#{$key}: #{$val};
+    }
+
+    //font-sizes
+    @each $key,
+    $val in $font-sizes {
+        --font-size-#{$key}: #{$val};
+    }
+
+    //font-weights
+    @each $key,
+    $val in $font-weights {
+        --font-weight-#{$key}: #{$val};
+    }
+}

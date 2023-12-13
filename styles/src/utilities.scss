@@ -1,0 +1,456 @@
+.object-fit {
+    height: 100%;
+    width: 100%;
+
+    &_cover {
+        object-fit: cover;
+    }
+}
+
+.fill-height {
+    height: 100%;
+}
+
+.title-text {
+    font-weight: 300;
+    color: white;
+    font-weight: 200;
+    letter-spacing: 1.2rem;
+
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-right: 40px;
+
+    @media screen and (min-width: 350px) {
+        letter-spacing: 0.5rem;
+        padding-left: 10px;
+    }
+
+    @media screen and (min-width: 768px) {
+        padding-left: 5rem;
+        margin-top: 6rem;
+    }
+
+    @media screen and (min-width: 1024px) {
+        margin-top: 8rem;
+        padding-left: 20vw;
+
+        padding-top: 60px;
+        padding-bottom: 60px;
+        padding-right: 60px;
+    }
+}
+
+.show-small {
+    @media screen and (min-width: 350px) {
+        display: block;
+        align-content: center;
+    }
+
+    @media screen and (min-width: 768px) {
+        display: block;
+        align-content: center;
+    }
+
+    @media screen and (min-width: 1024px) {
+        display: none;
+    }
+}
+
+.show-large {
+    @media screen and (min-width: 350px) {
+        display: none;
+    }
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+
+    @media screen and (min-width: 1000px) {
+        display: block;
+        align-content: center;
+    }
+}
+
+#more {
+    display: none;
+}
+
+.SameGrid {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.button {
+    transition: 0.3s;
+
+    border: none;
+    color: white;
+    cursor: pointer;
+
+    font-size: var(--font-size-x-large);
+    font-weight: 400;
+    line-height: 1.15rem;
+    width: 100%;
+    height: 100%;
+
+    text-transform: uppercase;
+    outline: none;
+
+    position: absolute;
+    z-index: 10;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.card {
+    &_ContactUs {
+    }
+}
+
+.card-header {
+    &_ContactUs h3 {
+        background-color: white;
+        color: #022720;
+        font-weight: bold;
+        text-transform: none;
+        font-size: 1.1rem;
+    }
+
+    &_ContactUs[aria-expanded='false'] h3 {
+        font-weight: 300;
+        font-size: 1.1rem;
+    }
+
+    &_ContactUs h3:hover {
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 1.1rem;
+    }
+}
+
+.MenuHeading {
+    background-color: #022720;
+    position: sticky;
+    top: 45px;
+    z-index: 99;
+    cursor: pointer;
+
+    @media screen and (max-width: 999px) {
+        top: 0px;
+    }
+}
+
+.bannerHeadings {
+    font-size: 3rem;
+    font-weight: 200;
+    text-align: left;
+    margin-left: 5rem;
+
+    max-width: 1200px;
+    margin: auto;
+
+    letter-spacing: 7px;
+
+    span {
+        font-size: 4.7rem;
+        letter-spacing: 7px;
+    }
+
+    @media screen and (max-width: 999px) {
+        font-size: 1.5rem;
+        margin-left: 1rem;
+        letter-spacing: 4px;
+
+        span {
+            font-size: 2rem;
+            letter-spacing: 4px;
+        }
+    }
+}
+
+.bannerSubHeadings {
+    font-size: 5rem;
+    font-weight: 200;
+    text-align: left;
+    margin-left: 5rem;
+
+    max-width: 1200px;
+    margin: auto;
+
+    @media screen and (max-width: 999px) {
+        font-size: 3rem;
+        margin-left: 2rem;
+    }
+}
+
+.bannerHeadingsSubMenu {
+    font-size: 5rem;
+    font-weight: 200;
+    text-align: left;
+    margin-left: 5rem;
+
+    max-width: 1200px;
+    margin: auto;
+
+    @media screen and (max-width: 1260px) {
+        margin-left: 2rem;
+        font-size: 3rem;
+    }
+}
+
+.bannerSubHeadingsSubMenu {
+    font-size: 4rem;
+    font-weight: 200;
+    text-align: left;
+    margin-left: 5rem;
+
+    max-width: 1200px;
+    margin: auto;
+
+    @media screen and (max-width: 1260px) {
+        margin-left: 2rem;
+        font-size: 1.5rem;
+    }
+}
+
+.triangle_down1_Small {
+    position: relative;
+    top: -3.5px;
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-right: 0.2em solid #cd612e;
+    border-top: 0.2em solid #cd612e;
+    transform: rotate(135deg);
+    margin-right: 0.5em;
+}
+
+.KyleHomePageImg {
+    background-image: url('https://cdn.the11thfloor.co.za/img/pages/home/Kyle.jpg');
+    min-height: 800px;
+    background-size: cover;
+    background-position: center -6vw;
+    background-repeat: no-repeat;
+}
+
+.KyleHomePageImgShowMore {
+    background-position: center center;
+}
+
+.UnderLineGrowOnHover {
+    cursor: pointer;
+    margin: auto;
+
+    &:after {
+        content: '';
+        display: block;
+        width: 100%;
+        margin: auto;
+        height: 2px;
+        bottom: 0;
+        margin-top: 5px;
+        left: 0;
+        transform: scaleX(0);
+        background-color: #de7e49;
+        transform-origin: bottom right;
+        transition: transform 0.5s ease-out;
+    }
+
+    &:hover {
+        &:after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+    }
+}
+
+.triangle_down1,
+.triangle_down2 {
+    position: relative;
+    top: 5px;
+
+    display: inline-block;
+    width: 40px;
+    height: 18px;
+    background-image: url('https://cdn.the11thfloor.co.za/img/landing-pages/date-night/arrow.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 0px;
+}
+
+.triangle_up1,
+.triangle_up2 {
+    position: relative;
+
+    display: inline-block;
+
+    background-image: url('https://cdn.the11thfloor.co.za/img/landing-pages/date-night/arrow.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 0px;
+    transform: rotate(180deg);
+}
+
+.MothersDayMenuTitle {
+    font-size: 20px;
+    font-weight: 100;
+    padding-bottom: 5px;
+    margin: auto;
+    width: fit-content;
+}
+
+.MothersDayMenuDescription {
+    font-size: 10px;
+    font-weight: 100;
+}
+
+.MothersDayMenu {
+    cursor: pointer;
+
+    .MothersDayMenuTitle:after {
+        content: '';
+        display: block;
+        width: 100%;
+        margin: auto;
+        height: 2px;
+        bottom: 0;
+        margin-top: 5px;
+        left: 0;
+        transform: scaleX(0);
+        background-color: #022720;
+        transform-origin: bottom right;
+        transition: transform 0.5s ease-out;
+    }
+
+    &:hover {
+        .MothersDayMenuTitle,
+        .MothersDayMenuDescription {
+            font-weight: bold;
+        }
+
+        .MothersDayMenuTitle:after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+    }
+}
+
+.MothersDayMenuSelected {
+    .MothersDayMenuTitle,
+    .MothersDayMenuDescription {
+        font-weight: bold;
+    }
+
+    .MothersDayMenuTitle:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+}
+
+.tblHeight {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+input[type='date']::-webkit-calendar-picker-indicator,
+input[type='time']::-webkit-calendar-picker-indicator {
+    background-position: right;
+    background-size: auto;
+    cursor: pointer;
+    position: absolute;
+    left: 0px;
+    right: 5px;
+    bottom: 7px;
+    width: auto;
+}
+
+.Svg {
+    fill: var(--color-copper-medium);
+    transition: all 0.3s;
+    padding: 3px;
+    cursor: pointer;
+
+    &:hover {
+        padding: 0px;
+        fill: white;
+    }
+}
+
+.SvgCol {
+    color: var(--color-copper-medium);
+    transition: all 0.3s;
+    padding: 3px;
+    cursor: pointer;
+
+    &:hover {
+        padding: 0px;
+        color: white;
+    }
+}
+
+.SvgStroke {
+    stroke: var(--color-copper-medium);
+    transition: all 0.3s;
+    padding: 3px;
+    cursor: pointer;
+
+    &:hover {
+        padding: 0px;
+        stroke: white;
+    }
+}
+
+.SelectedGroupsUsers {
+    background-color: #3d3d3d;
+    border-radius: 20px;
+}
+
+//swal
+.swal2-popup {
+    font-family: 'Lato';
+    background-color: white;
+    border-radius: 0;
+    border: 2px solid #cd612e;
+    color: #022720;
+    h2 {
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: lighter;
+    }
+    .swal2-confirm {
+        font-family: 'Lato';
+        border-radius: 0px;
+        background-color: #022720;
+        &:focus {
+            outline: none;
+        }
+    }
+    .swal2-cancel {
+        font-family: 'Lato';
+        background-color: #cd612e;
+        border-radius: 0px;
+    }
+    .swal2-loader {
+        border-color: #022720 rgba(0, 0, 0, 0) #022720 rgba(0, 0, 0, 0);
+    }
+}
+
+@keyframes growVertically {
+    from {
+        max-height:0px;
+    }
+    to{
+        max-height:3000px
+    }
+}
+.growVertically{
+    overflow: hidden;
+    animation: growVertically 3s;
+}

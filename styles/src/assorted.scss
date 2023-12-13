@@ -1,0 +1,56 @@
+.line {
+    background-color: #353535;
+    width: 5px;
+    height: 100%;
+}
+
+.timeline{
+    h1{
+        transition: all 0.3s ease-in-out;
+        @media screen and (min-width: 350px) {
+            font-size: 32px;
+        }
+        @media screen and (min-width: 768px) {
+            font-size: 36px;
+        }
+        @media screen and (min-width: 1000px) {
+            font-size: 40px;
+        }
+    }
+
+    p{
+
+        @media screen and (min-width: 350px) {
+            font-size: 18px;
+        };
+        @media screen and (min-width: 768px) {
+            font-size: 20px;
+        }
+        @media screen and (min-width: 1000px) {
+            font-size: 22px;
+        }
+
+    }
+
+    &:hover{
+
+        h1{
+            color: #106700;
+        }
+        
+    }
+}
+
+.main-heading{
+
+    @media screen and (min-width: 350px) {
+        font-size: 36px;
+    };
+    @media screen and (min-width: 768px) {
+        font-size: 38px;
+    }
+    @media screen and (min-width: 1000px) {
+        font-size: 40px;
+    }
+
+}

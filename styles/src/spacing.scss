@@ -1,0 +1,220 @@
+//for each suffix and medium with padding or margin
+@each $suffix,
+$medium in (margin: margin, padding: padding) {
+
+    @each $key,
+    $val in $spacings {
+        //********************************************************************************************************************
+        //Start of around spacing
+        //********************************************************************************************************************
+
+        .#{$suffix}-around_#{$key} {
+            #{$medium}: $val;
+        }
+
+        @media screen and (max-width: 767px) {
+            .#{$suffix}-small-around_#{$key} {
+                #{$medium}: $val;
+            }
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            .#{$suffix}-medium-around_#{$key} {
+                #{$medium}: $val;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            .#{$suffix}-large-around_#{$key} {
+                #{$medium}: $val;
+            }
+        }
+
+        //********************************************************************************************************************
+        //End of around spacing
+        //********************************************************************************************************************
+
+        //********************************************************************************************************************
+        //Start of horizontal spacing
+        //********************************************************************************************************************
+
+        .#{$suffix}-horizontal_#{$key} {
+            #{$medium}-left: $val;
+            #{$medium}-right: $val;
+        }
+
+        @media screen and (max-width: 767px) {
+            .#{$suffix}-small-horizontal_#{$key} {
+                #{$medium}-left: $val;
+                #{$medium}-right: $val;
+            }
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            .#{$suffix}-medium-horizontal_#{$key} {
+                #{$medium}-left: $val;
+                #{$medium}-right: $val;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            .#{$suffix}-large-horizontal_#{$key} {
+                #{$medium}-left: $val;
+                #{$medium}-right: $val;
+            }
+        }
+
+        //********************************************************************************************************************
+        //End of horizontal spacing
+        //********************************************************************************************************************
+
+        //********************************************************************************************************************
+        //Start of vertical spacing
+        //********************************************************************************************************************
+        .#{$suffix}-vertical_#{$key} {
+            #{$medium}-top: $val;
+            #{$medium}-bottom: $val;
+        }
+
+        @media screen and (max-width: 767px) {
+            .#{$suffix}-small-vertical_#{$key} {
+                #{$medium}-top: $val;
+                #{$medium}-bottom: $val;
+            }
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            .#{$suffix}-medium-vertical_#{$key} {
+                #{$medium}-top: $val;
+                #{$medium}-bottom: $val;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            .#{$suffix}-large-vertical_#{$key} {
+                #{$medium}-top: $val;
+                #{$medium}-bottom: $val;
+            }
+        }
+
+        //********************************************************************************************************************
+        //End of vertical spacing
+        //********************************************************************************************************************
+
+        //********************************************************************************************************************
+        //Start of top spacing
+        //********************************************************************************************************************
+        .#{$suffix}-top_#{$key} {
+            #{$medium}-top: $val;
+        }
+
+        @media screen and (max-width: 767px) {
+            .#{$suffix}-small-top_#{$key} {
+                #{$medium}-top: $val;
+            }
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            .#{$suffix}-medium-top_#{$key} {
+                #{$medium}-top: $val;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            .#{$suffix}-large-top_#{$key} {
+                #{$medium}-top: $val;
+            }
+        }
+
+        //********************************************************************************************************************
+        //End of top spacing
+        //********************************************************************************************************************
+
+        //********************************************************************************************************************
+        //Start of bottom spacing
+        //********************************************************************************************************************
+        .#{$suffix}-bottom_#{$key} {
+            #{$medium}-bottom: $val;
+        }
+
+        @media screen and (max-width: 767px) {
+            .#{$suffix}-small-bottom_#{$key} {
+                #{$medium}-bottom: $val;
+            }
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            .#{$suffix}-medium-bottom_#{$key} {
+                #{$medium}-bottom: $val;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            .#{$suffix}-large-bottom_#{$key} {
+                #{$medium}-bottom: $val;
+            }
+        }
+
+        //********************************************************************************************************************
+        //End of top spacing
+        //********************************************************************************************************************
+
+        //********************************************************************************************************************
+        //Start of left spacing
+        //********************************************************************************************************************
+        .#{$suffix}-left_#{$key} {
+            #{$medium}-left: $val;
+        }
+
+        @media screen and (max-width: 767px) {
+            .#{$suffix}-small-left_#{$key} {
+                #{$medium}-left: $val;
+            }
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            .#{$suffix}-medium-left_#{$key} {
+                #{$medium}-left: $val;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            .#{$suffix}-large-left_#{$key} {
+                #{$medium}-left: $val;
+            }
+        }
+
+        //********************************************************************************************************************
+        //End of left spacing
+        //********************************************************************************************************************
+
+        //********************************************************************************************************************
+        //Start of right spacing
+        //********************************************************************************************************************
+        .#{$suffix}-right_#{$key} {
+            #{$medium}-right: $val;
+        }
+
+        @media screen and (max-width: 767px) {
+            .#{$suffix}-small-right_#{$key} {
+                #{$medium}-right: $val;
+            }
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            .#{$suffix}-medium-right_#{$key} {
+                #{$medium}-right: $val;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            .#{$suffix}-large-right_#{$key} {
+                #{$medium}-right: $val;
+            }
+        }
+
+        //********************************************************************************************************************
+        //End of right spacing
+        //********************************************************************************************************************
+    }
+}

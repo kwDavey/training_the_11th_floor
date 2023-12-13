@@ -1,0 +1,72 @@
+// Required to apply syling to root div
+html{
+    background-color: #022720;
+}
+#__next {
+    background-color: #022720;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    width: 100%;
+}
+
+*,
+:before,
+:after {
+    box-sizing: border-box;
+    text-decoration: none !important;
+}
+
+html,
+body {
+    background-color: var(--page-background-color);
+    color: var(--color-black);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 100%;
+    // overflow-x: hidden;
+}
+
+img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-copper-medium);
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        font-weight: bold;
+        color: var(--color-copper-medium);
+    }
+}
+
+.DarkGreenA {
+    text-decoration: none;
+    color: #022720;
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        font-weight: bold;
+        color: #022720;
+    }
+}
+
+.object-fit {
+    height: 100%;
+    width: 100%;
+
+    &_cover {
+        object-fit: cover;
+    }
+
+    &_contain {
+        object-fit: contain;
+    }
+}
